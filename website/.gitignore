@@ -1,0 +1,11 @@
+*.log
+*.pot
+*.pyc
+pycache
+db.sqlite3
+media
+pip-log.txt 
+pip-delete-this-directory.txt
+.vscode
+rf_indian_model.sav
+rf_western_sample_model.sav

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../static/indian.css">
+
+{% extends "base.html"%}
+{%block title%}Indian Music Genre Classification{%endblock%}
+ {% block content %}
+ <body>
+ <div class = "contents">
+    <div class ="inner-box">
+        <h1 class="heading"><strong>Indian Music Genre Classifier</strong></h1>
+        <form action="/indian" method="POST" id="classifier" enctype="multipart/form-data">
+            <label for="audio" class="drop-container">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" name="audiofile" id="audio" accept="audio/*" required>
+              </label>
+              
+            
+        </form>
+        <button form="classifier" class="btnfos btnfos-5">Classify</button>
+        <div class="predicted_genre">
+            <p>Input song: </p>
+            {%if predicted_genre%}
+                <p class="prediction">{{filename}}</p>
+            {%endif%}
+        </div>
+    <div class="predicted_genre">
+        <p>Predicted Genre: </p>
+        {%if predicted_genre%}
+            <p class="prediction">{{predicted_genre}}</p>
+        {%endif%}
+    </div>
+    
+    
+
+    
+ </div>
+ </div>
+</body>
+{%endblock%}
